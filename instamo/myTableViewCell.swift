@@ -15,6 +15,7 @@ class myTableViewCell: UITableViewCell {
     @IBOutlet weak var UserName: UILabel!
     @IBOutlet weak var labelCell: UILabel!
         
+    @IBOutlet weak var userImaGE: UIImageView!
         @IBOutlet weak var cellImage: UIImageView!
     
     @IBOutlet weak var likeButton:  DOFavoriteButton!
@@ -43,7 +44,7 @@ class myTableViewCell: UITableViewCell {
 
                 
             }
-        }
+        } 
     
     
        
@@ -52,6 +53,7 @@ class myTableViewCell: UITableViewCell {
             didSet {
                 print("did set caption and image?")
                 cellImage.image = photo.image
+                userImaGE.image = photo.image
                 print("This is the image that is to be set: \(photo.image)")
                 labelCell.text = photo.caption
             }
