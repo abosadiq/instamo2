@@ -32,6 +32,9 @@ class myTableViewCell: UITableViewCell {
             didSet {
                 photo = Photo(object: object!)
                 photo.cell = self;
+                //let formatter = NSDateFormatter()
+                //formatter.dateFormat = "MMM d, hh:mm a"
+                //timer.text = formatter.stringFromDate(photo.createdAt!)
                 
                 Like_Button.addTarget(self, action: Selector("tapped:"), forControlEvents: .TouchUpInside)
                 Like_Button.imageColorOn = UIColor(red: 0.9098, green: 0.2314, blue: 0.2078, alpha: 1.0) /* #e83b35 */

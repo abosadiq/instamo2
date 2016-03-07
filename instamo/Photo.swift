@@ -8,7 +8,7 @@
 
 import UIKit
 import Parse
-
+import ParseUI
 let imageDataSetNotification = "imageDataSet";
 
 class Photo: NSObject {
@@ -20,7 +20,9 @@ class Photo: NSObject {
     var commentsCount: Int?
     var UserName: String?
     var cell: myTableViewCell?
-      var PassedTime: Int?
+      var PostedTime: String?
+    var createdAt: NSDate?
+
     
     init(object : PFObject) {
         
@@ -35,7 +37,13 @@ class Photo: NSObject {
         caption = newObject["caption"] as? String
         likesCount = newObject["likesCount"] as? Int
         commentsCount = newObject["commentsCount"] as? Int
+       //PostedTime = newObject["PostedTime"] as? String
+
         UserName = newObject["UserName"] as? String
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+        //let createdAt = formatter.dateFromString(PostedTime!)!
+     // PostedTime = "\(String(Int(NSDate().timeIntervalSinceDate(createdAt))))" as String
         
         if let newImage = object.valueForKey("media")! as? PFFile {
             

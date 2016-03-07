@@ -30,6 +30,7 @@ class Post: NSObject {
         media["likesCount"] = 0
         media["commentsCount"] = 0
         media["UserName"] = PFUser.currentUser()?.username
+       // media ["PostedTime"] = 0
         
         
         
