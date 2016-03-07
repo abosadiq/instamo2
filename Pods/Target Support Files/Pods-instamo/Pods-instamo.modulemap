@@ -1,0 +1,6 @@
+framework module Pods_instamo {
+  umbrella header "Pods-instamo-umbrella.h"
+
+  export *
+  module * { export * }
+}
